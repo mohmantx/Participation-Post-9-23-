@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:_P__PokeApi"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ComboBox x:Name="cmbPkmn" HorizontalAlignment="Left" Margin="95,153,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
-        <Image x:Name="imgSprite" HorizontalAlignment="Left" Height="133" Margin="369,131,0,0" VerticalAlignment="Top" Width="152"/>
+    <Grid Background="#FFCDCDCD">
+        <ComboBox x:Name="cmbPkmn" HorizontalAlignment="Left" Margin="50,57,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Image x:Name="imgSprite" HorizontalAlignment="Left" Height="170" Margin="564,37,0,0" VerticalAlignment="Top" Width="203"/>
+        <Label x:Name="lblHeight" Content="Label" HorizontalAlignment="Left" Height="29" Margin="294,252,0,0" VerticalAlignment="Top" Width="414"/>
+        <Label x:Name="lblWeight" Content="Label" HorizontalAlignment="Left" Height="24" Margin="564,281,0,0" VerticalAlignment="Top" Width="144"/>
+        <ListBox x:Name="lstStats" HorizontalAlignment="Left" Height="168" Margin="531,79,0,0" VerticalAlignment="Top" Width="177"/>
 
     </Grid>
 </Window>

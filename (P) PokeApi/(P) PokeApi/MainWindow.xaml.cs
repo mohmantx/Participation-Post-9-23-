@@ -26,13 +26,13 @@ namespace _P__PokeApi
         {
             InitializeComponent();
 
-            string ApiLink = @"https://pokeapi.co/api/v2/pokemon/?offset=20&limit=1100";
+            string ApiLink = @"https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1100";
 
             Pokemon pkmnAPIResult;
 
             using (var client = new HttpClient())
             {
-                string jsonresult = client.GetStringAsync(ApiLink).Result;
+                var jsonresult = client.GetStringAsync(ApiLink).Result;
 
                 pkmnAPIResult = JsonConvert.DeserializeObject<Pokemon>(jsonresult);
             }
@@ -41,17 +41,30 @@ namespace _P__PokeApi
             foreach (var character in pkmnAPIResult.pkmnlist)
             {
                 cmbPkmn.Items.Add(character);
-
-                //overide string in class
             }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var pkmn = (Pokemon)cmbPkmn.SelectedItem;
+            var pkmn = (AllResults)cmbPkmn.SelectedItem;
+            string URLPkmn = pkmn.url;
+
+            Pokemon stat;
+
+            using (var client = new HttpClient())
+            {
+                var statResult = client.GetStringAsync(URLPkmn).Result;
+
+                stat = JsonConvert.DeserializeObject<Pokemon>(statResult);
+            }
+
+            foreach (var info in stat.statlist)
+            {
+                lstStats.Items.Add(info);
+            }
+
             
-            
-            
+
         }
     }
 }
