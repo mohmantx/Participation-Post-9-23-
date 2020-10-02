@@ -33,7 +33,6 @@ namespace _P__PokeApi
             using (var client = new HttpClient())
             {
                 var jsonresult = client.GetStringAsync(ApiLink).Result;
-
                 pkmnAPIResult = JsonConvert.DeserializeObject<Pokemon>(jsonresult);
             }
             
@@ -47,21 +46,25 @@ namespace _P__PokeApi
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var pkmn = (AllResults)cmbPkmn.SelectedItem;
-            string URLPkmn = pkmn.url;
+            string URLPkmn = $@"{pkmn.url}";
+            URL information;
 
-            Pokemon stat;
-
-            using (var client = new HttpClient())
+            using (var client1 = new HttpClient())
             {
-                var statResult = client.GetStringAsync(URLPkmn).Result;
+                var statResult = client1.GetStringAsync(URLPkmn).Result;
+                information = JsonConvert.DeserializeObject<URL>(statResult);
 
-                stat = JsonConvert.DeserializeObject<Pokemon>(statResult);
+                var sprite = $@"{information.sprites}";
+                Sprite spr;
+                using (var client2 = new HttpClient())
+                {
+                    string stance = client2.GetStringAsync(sprite).Result;
+                    spr = JsonConvert.DeserializeObject<Sprite>(stance);
+                }
+                imgBack.Source = new BitmapImage(new Uri(pkmn.stats.sprites.back_default));
             }
 
-            foreach (var info in stat.statlist)
-            {
-                lstStats.Items.Add(info);
-            }
+            
 
             
 

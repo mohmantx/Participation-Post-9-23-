@@ -11,7 +11,8 @@
         <Image x:Name="imgSprite" HorizontalAlignment="Left" Height="170" Margin="564,37,0,0" VerticalAlignment="Top" Width="203"/>
         <Label x:Name="lblHeight" Content="Label" HorizontalAlignment="Left" Height="29" Margin="294,252,0,0" VerticalAlignment="Top" Width="414"/>
         <Label x:Name="lblWeight" Content="Label" HorizontalAlignment="Left" Height="24" Margin="564,281,0,0" VerticalAlignment="Top" Width="144"/>
-        <ListBox x:Name="lstStats" HorizontalAlignment="Left" Height="168" Margin="531,79,0,0" VerticalAlignment="Top" Width="177"/>
+        <Image x:Name="imgFront" HorizontalAlignment="Left" Height="100" Margin="564,112,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="imgBack" HorizontalAlignment="Left" Height="100" Margin="371,112,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>
