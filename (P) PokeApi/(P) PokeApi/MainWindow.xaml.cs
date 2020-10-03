@@ -54,19 +54,12 @@ namespace _P__PokeApi
                 var statResult = client1.GetStringAsync(URLPkmn).Result;
                 information = JsonConvert.DeserializeObject<URL>(statResult);
 
-                var sprite = $@"{information.sprites}";
-                Sprite spr;
-                using (var client2 = new HttpClient())
-                {
-                    string stance = client2.GetStringAsync(sprite).Result;
-                    spr = JsonConvert.DeserializeObject<Sprite>(stance);
-                }
-                imgBack.Source = new BitmapImage(new Uri(pkmn.stats.sprites.back_default));
+                imgBack.Source = new BitmapImage(new Uri(information.sprites.back_default));
+                imgFront.Source = new BitmapImage(new Uri(information.sprites.front_default));
+                lblHeight.Content = $"Height: {information.height}";
+                lblWeight.Content = $"Weight: {information.weight}";
             }
 
-            
-
-            
 
         }
     }

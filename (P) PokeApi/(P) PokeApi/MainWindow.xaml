@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FFCDCDCD">
-        <ComboBox x:Name="cmbPkmn" HorizontalAlignment="Left" Margin="50,57,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="cmbPkmn" HorizontalAlignment="Left" Margin="50,88,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
         <Image x:Name="imgSprite" HorizontalAlignment="Left" Height="170" Margin="564,37,0,0" VerticalAlignment="Top" Width="203"/>
-        <Label x:Name="lblHeight" Content="Label" HorizontalAlignment="Left" Height="29" Margin="294,252,0,0" VerticalAlignment="Top" Width="414"/>
-        <Label x:Name="lblWeight" Content="Label" HorizontalAlignment="Left" Height="24" Margin="564,281,0,0" VerticalAlignment="Top" Width="144"/>
-        <Image x:Name="imgFront" HorizontalAlignment="Left" Height="100" Margin="564,112,0,0" VerticalAlignment="Top" Width="100"/>
-        <Image x:Name="imgBack" HorizontalAlignment="Left" Height="100" Margin="371,112,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="lblHeight" Content="" HorizontalAlignment="Left" Height="29" Margin="30,158,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label x:Name="lblWeight" Content="" HorizontalAlignment="Left" Height="24" Margin="46,217,0,0" VerticalAlignment="Top" Width="144"/>
+        <Image x:Name="imgFront" HorizontalAlignment="Left" Height="200" Margin="524,37,0,0" VerticalAlignment="Top" Width="200"/>
+        <Image x:Name="imgBack" HorizontalAlignment="Left" Height="200" Margin="284,187,0,0" VerticalAlignment="Top" Width="200"/>
 
     </Grid>
 </Window>

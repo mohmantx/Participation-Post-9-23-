@@ -11,10 +11,6 @@ namespace _P__PokeApi
     {
         [JsonProperty("Results")]
         public List<AllResults> pkmnlist { get; set; }
-
-        
-
-        
     }
     public class AllResults
     {
