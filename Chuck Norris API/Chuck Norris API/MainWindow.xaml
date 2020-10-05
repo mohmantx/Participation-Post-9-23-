@@ -1,0 +1,21 @@
+﻿<Window x:Class="Chuck_Norris_API.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chuck_Norris_API"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Image Height="280" Margin="106,64,106,0" VerticalAlignment="Top">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="C:\Users\mohma\OneDrive\OU Course Documents\[2020-2021] Junior Year\Fall 2020\Programming [MIS 3033]\Participation\chucknorris.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <ComboBox x:Name="cboCategory" HorizontalAlignment="Left" Margin="44,42,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboCategory_SelectionChanged"/>
+
+    </Grid>
+</Window>
