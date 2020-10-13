@@ -10,12 +10,14 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Image Height="280" Margin="106,64,106,0" VerticalAlignment="Top">
+        <Image x:Name="imgChuck" Height="280" Margin="106,64,106,0" VerticalAlignment="Top">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="C:\Users\mohma\OneDrive\OU Course Documents\[2020-2021] Junior Year\Fall 2020\Programming [MIS 3033]\Participation\chucknorris.jpg"/>
+                <ImageBrush ImageSource="chucknorris.jpg"/>
             </Image.OpacityMask>
         </Image>
         <ComboBox x:Name="cboCategory" HorizontalAlignment="Left" Margin="44,42,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboCategory_SelectionChanged"/>
+        <Button x:Name="btnJoke" Content="Press for a joke" HorizontalAlignment="Center" Height="59" Margin="0,343,0,0" VerticalAlignment="Top" Width="140" Click="btnJoke_Click"/>
+        <Label Content="Select a joke category" HorizontalAlignment="Left" Height="24" Margin="44,13,0,0" VerticalAlignment="Top" Width="138"/>
 
     </Grid>
 </Window>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="_P__Classes_3.PopupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_P__Classes_3"
+        mc:Ignorable="d"
+        Title="PopupWindow" Height="450" Width="800">
+    <Grid Background="#FFFCD1D1">
+        <TextBlock x:Name="tbkName" HorizontalAlignment="Center" Height="50" Margin="0,32,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="358"/>
+
+    </Grid>
+</Window>

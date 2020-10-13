@@ -26,20 +26,46 @@ namespace Chuck_Norris_API
         {
             InitializeComponent();
 
-            string URLCategory = @"https://api.chucknorris.io/jokes/categories";
-
-            Quotes categories;
+            string[] categories;
 
             using (var client = new HttpClient())
             {
-                var json = client.GetStringAsync(URLCategory).Result;
-                categories = JsonConvert.DeserializeObject<Quotes>(json);
+                var jsonResults = client.GetStringAsync(@"https://api.chucknorris.io/jokes/categories").Result;
+                categories = JsonConvert.DeserializeObject<string[]>(jsonResults);
+            }
+            cboCategory.Items.Add("All");
+
+            foreach (var category in categories)
+            {
+                cboCategory.Items.Add(category);
+            }
+        }
+        //For some reason I can't get my image of chuck norris to work
+        private void btnJoke_Click(object sender, RoutedEventArgs e)
+        {
+            var norris = cboCategory.SelectedItem;
+
+            string URLcat;
+
+            if (norris.ToString() == "All")
+            {
+                URLcat = "https://api.chucknorris.io/jokes/random";
+            }
+            else
+            {
+                URLcat = "https://api.chucknorris.io/jokes/random?category=" + norris;
             }
 
-            foreach (var cat in categories.categorylist)
+            Quotes API;
+
+            using (var client = new HttpClient())
             {
-                cboCategory.Items.Add(cat);
+                string convJson = client.GetStringAsync(URLcat).Result;
+                API = JsonConvert.DeserializeObject<Quotes>(convJson);
             }
+            string randJoke = API.ToString();
+            MessageBox.Show(randJoke);
+            
         }
 
         private void cboCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)

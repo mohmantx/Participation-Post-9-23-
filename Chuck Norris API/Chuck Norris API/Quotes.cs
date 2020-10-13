@@ -6,11 +6,14 @@ namespace Chuck_Norris_API
 {
     class Quotes
     {
-        public List<Results> categorylist { get; set; }
+        public string value { get; set; }
+
+
+        public override string ToString()
+        {
+            return value;
+        }
     }
 
-    public class Results
-    {
-        public string categories { get; set; }
-    }
+    
 }

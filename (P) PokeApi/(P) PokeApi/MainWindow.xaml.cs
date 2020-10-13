@@ -46,10 +46,14 @@ namespace _P__PokeApi
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var pkmn = (AllResults)cmbPkmn.SelectedItem;
-            string URLPkmn = $@"{pkmn.url}";
-            URL information;
 
-            using (var client1 = new HttpClient())
+            PokemonInfoWindow infoWindow = new PokemonInfoWindow();
+            
+            
+                string URLPkmn = $@"{pkmn.url}";
+                URL information;
+
+                using (var client1 = new HttpClient())
             {
                 var statResult = client1.GetStringAsync(URLPkmn).Result;
                 information = JsonConvert.DeserializeObject<URL>(statResult);
