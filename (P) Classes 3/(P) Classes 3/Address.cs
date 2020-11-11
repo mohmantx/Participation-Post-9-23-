@@ -15,7 +15,9 @@ namespace _P__Classes_3
         public Address()
         {
 
+
         }
+
         public Address(int stnum, string stname, string city, string state, int zip)
         {
             stnum = StreetNumber;
@@ -24,7 +26,5 @@ namespace _P__Classes_3
             state = State;
             zip = Zip;
         }
-
-
     }
 }

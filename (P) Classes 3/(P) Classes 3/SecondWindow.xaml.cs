@@ -27,6 +27,8 @@ namespace _P__Classes_3
             
         }
 
+        public MainWindow main { get; set; }
+
         public void Output(Student form)
         {
             string output = form.FirstName + form.LastName;

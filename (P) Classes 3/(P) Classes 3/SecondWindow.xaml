@@ -6,8 +6,12 @@
         xmlns:local="clr-namespace:_P__Classes_3"
         mc:Ignorable="d"
         Title="PopupWindow" Height="450" Width="800">
-    <Grid Background="#FFFCD1D1">
+    <Grid Background="#FF7EB656">
         <TextBlock x:Name="tbkName" HorizontalAlignment="Center" Height="50" Margin="0,32,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="358"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="90" Margin="102,278,0,0" VerticalAlignment="Top" Width="237"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="23" Margin="102,194,0,0" VerticalAlignment="Top" Width="237"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="484,217,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+        <TextBox HorizontalAlignment="Left" Height="45" Margin="484,278,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
 
     </Grid>
 </Window>

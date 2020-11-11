@@ -5,27 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace _P__PokeApi
+namespace _P__MVC___Beginner.Models
 {
-    class Pokemon
+    
+    public class Dex
     {
         [JsonProperty("Results")]
-        public List<AllResults> pkmnlist { get; set; }
+        public List<PokemonAPI> pkmnlist { get; set; }
     }
-    public class AllResults
+    public class PokemonAPI
     {
         public string name { get; set; }
         public string url { get; set; }
         public URL stats { get; set; }
-
-
-        public override string ToString()
-        {
-            return "" + name[0].ToString().ToUpper() + name.Substring(1, name.Length - 1);
-        }
-
     }
-
     public class URL
     {
         public int height { get; set; }

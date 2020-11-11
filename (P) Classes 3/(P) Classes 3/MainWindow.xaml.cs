@@ -27,37 +27,27 @@ namespace _P__Classes_3
 
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
-            string fname, lname, major;
-            double gpa;
-            int stnum, zip;
-            string stname, city, state;
+            string firstname = txtFName.Text;
+            string lastname = txtLName.Text;
+            string major = txtMaj.Text;
+            double gpa = Convert.ToDouble(txtGPA.Text);
+            int streetnumber = Convert.ToInt32(txtStrNum.Text);
+            string streetname = txtStrName.Text;
+            string city = txtCity.Text;
+            string state = txtState.Text;
+            int zipcode = Convert.ToInt32(txtZipCode.Text);
 
-            fname = txtFirst.Text;
-            lname = txtLast.Text;
-            major = txtMajor.Text;
-            gpa = Convert.ToDouble(txtGPA.Text);
+            Address address = new Address(streetnumber, streetname, city, state, zipcode);
+            Student form = new Student(firstname, lastname, major, gpa, address);
 
-            stnum = Convert.ToInt32(txtStreetNum.Text);
-            stname = txtStreetName.Text;
-            city = txtCity.Text;
-            state = txtState.Text;
-            zip = Convert.ToInt32(txtZip.Text);
-
-            Address addy = new Address(stnum, stname, city, state, zip);
-
-            Student form = new Student(fname, lname, major, gpa, addy);
-
-            string output = form.ToString() + "\n" + form.CalculateDistinction();
-
-            lstStudent.Items.Add(output);
-
-
-            
+            string toForm = form.ToString() + "\n" + form.CalculateDistinction();
+            lstStudent.Items.Add(toForm);
         }
+
 
         private void lstStudent_OnSelected(object sender, RoutedEventArgs e)
         {
-            ListBoxItem lst = e.Source as ListBoxItem;
+            
 
             
         }
