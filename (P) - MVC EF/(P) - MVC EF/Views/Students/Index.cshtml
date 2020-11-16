@@ -1,0 +1,42 @@
+﻿@model IEnumerable<_P____MVC_EF.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Student Index</h2>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <div class="card-columns-fluid">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.cs.ou.edu/~atiq/pics/ou-logo-large1.gif" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</h5>
+                            <p class="card-text">Favorite Color: @Html.DisplayFor(modelItem => item.FavoriteColor)</p>
+                            <p class="card-text">@Html.ActionLink("Details", "Details", new { id = item.StudentID })</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FavoriteColor)
+        </th>
+        <th></th>
+    </tr>
+</table>

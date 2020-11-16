@@ -8,27 +8,17 @@ using Newtonsoft.Json;
 namespace _P__MVC___Beginner.Models
 {
     
-    public class Dex
-    {
-        [JsonProperty("Results")]
-        public List<PokemonAPI> pkmnlist { get; set; }
-    }
-    public class PokemonAPI
+    public class Result
     {
         public string name { get; set; }
         public string url { get; set; }
-        public URL stats { get; set; }
     }
-    public class URL
+    public class PokemonAPI
     {
-        public int height { get; set; }
-        public int weight { get; set; }
-        public Sprite sprites { get; set; }
+        public int count { get; set; }
+        public string next { get; set; }
+        public string previous { get; set; }
+        public List<Result> results { get; set; }
     }
-
-    public class Sprite
-    {
-        public string front_default { get; set; }
-        public string back_default { get; set; }
-    }
+ 
 }

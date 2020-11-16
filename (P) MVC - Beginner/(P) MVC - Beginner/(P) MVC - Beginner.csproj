@@ -141,6 +141,7 @@
     </Compile>
     <Compile Include="Models\ChuckAPI.cs" />
     <Compile Include="Models\PokemonAPI.cs" />
+    <Compile Include="Models\PokemonInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +182,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Chuck\Index.cshtml" />
     <Content Include="Views\Pokemon\Pokedex.cshtml" />
+    <Content Include="Views\Pokemon\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
